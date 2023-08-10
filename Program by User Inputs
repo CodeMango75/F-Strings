@@ -1,0 +1,27 @@
+import random
+print("Welcome to the world of Visualization, User. Please fill out the details below in order to proceed further")
+
+Candidate_Name = input("Enter Your Name: ")
+Candidate_Age = int(input("Enter Your Age: "))
+Candidate_Email = input("Please Enter Your Email Address: ")
+TermsAndConditions = input("Do You Agree with the Terms and Conditions?(YES/NO): ").lower()
+Reg_ID = random.randint(5000, 10000)
+
+
+if TermsAndConditions == "yes":
+    if  Candidate_Age >= 25:
+     print(f"""Congradulations! You have registered\n\n
+    =====================================================================    
+    Welcome, {Candidate_Name}. Your Information is as under: \n\n
+          \tYour Name \t: \t{Candidate_Name}
+          \tYour Age \t:  \t{Candidate_Age}
+          \tYour Email \t:  \t{Candidate_Email}
+          \tRegistration ID : \t{Reg_ID}
+    =====================================================================   
+          """)
+    else:
+       print("ERROR Registering! You Must be Above 25 to continue")
+elif TermsAndConditions == "no":
+    print("Registration Fail! You Must Read and Understand the Terms and Conditions!")    
+else:
+   print("Invalid Response. Please Print Yes or No")    
